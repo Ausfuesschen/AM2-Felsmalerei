@@ -1,0 +1,37 @@
+training-data
+|
+|------------- s1 (women)
+|	      |-- 1.png	
+|	      |-- 2.png	
+|------------- s2 (men)
+|	      |-- 1.png	
+|	      |-- 2.png	
+|------------- s3 (animals)
+|	      |-- 1.png	
+|	      |-- 2.png	
+|------------- s4 (text)
+|	      |-- 1.png	
+|	      |-- 2.png	
+
+
+-> As we have not assigned label 0 to anyone, the mapping for tag 0 is empty. 
+
+
+---Explanation---
+
+
+OpenCV algorithm receives two vectors (faces of all subjects, integer label for each subject):
+
+Subject-1	Subject-2
+img1		img1
+img2		img2
+... 		... 
+
+Data preparation step produces faces and label vectors: 
+
+Faces			Labels
+
+person1_img1_face	1
+person1_img2_face	1
+person2_img1_face	2
+person2_img2_face	2
