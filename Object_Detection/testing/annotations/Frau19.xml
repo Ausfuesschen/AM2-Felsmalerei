@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>Frau19.jpg</filename>
+	<path>C:\Users\Computer\Documents\TensorFlow\am2_cavepaintings\testing\images\Frau19.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1000</width>
+		<height>1000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>woman</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>46</xmin>
+			<ymin>41</ymin>
+			<xmax>808</xmax>
+			<ymax>941</ymax>
+		</bndbox>
+	</object>
+</annotation>

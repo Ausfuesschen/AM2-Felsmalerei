@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>Mann20.jpg</filename>
+	<path>C:\Users\Computer\Documents\TensorFlow\am2_cavepaintings\testing\images\Mann20.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1000</width>
+		<height>1000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>man</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>146</xmin>
+			<ymin>32</ymin>
+			<xmax>595</xmax>
+			<ymax>876</ymax>
+		</bndbox>
+	</object>
+</annotation>
