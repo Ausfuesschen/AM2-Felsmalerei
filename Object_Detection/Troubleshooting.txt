@@ -1,3 +1,18 @@
+#Pycoco tool import fails: 
+
+https://github.com/cocodataset/cocoapi/issues/14
+
+
+
+
+#Pycoco tool error "“/Wno-unused-function”": 
+
+http://frendy.vip/machine-learning/2017/07/22/windows-pycocotools.html
+(translate with Google translator)
+NOTE: If .proto files must be compiled manually, copy all
+those paths into your terminal!
+
+
 C:\Users\Computer\Documents\TensorFlow\protoc\bin\protoc .\object_detection\protos\anchor_generator.proto --python_out=.
 C:\Users\Computer\Documents\TensorFlow\protoc\bin\protoc .\object_detection\protos\argmax_matcher.proto --python_out=.
 C:\Users\Computer\Documents\TensorFlow\protoc\bin\protoc .\object_detection\protos\bipartite_matcher.proto --python_out=.
