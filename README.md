@@ -1,9 +1,42 @@
 # AM2-Felsmalerei
 Arbeitsgruppe von: Alexander Schroeder, Kristian Svane, Anja Wodzinski 
 
+## Projektbeschreibung
+Das vorliegeden Projekt setzt sich mit zwei verschiedenen Arten der Bilderkennung durch Machine Learning auseinander. Die erste Methode ist die Image Classification, welche Bilder mit einzelnen Objekten vorher definierten Klassen zuweisen kann. Die zweite Methode erweitert die erste Methode um die Object Detection. Damit lassen sich auf einem Bild mit mehreren Objekten die einzelnen Objekte bestimmen. Die ist besonders nützlich, da die Seiten mit den Figuren in der Theorie ohne Vorarbeit eingelesen werden können, dann die Objekte erkannt werden und zuletzt dann einer Klasse zugewiesen werden können. Allerdings erfordert die Object Detection einen signifikanteren Aufwand bei der Vorbereitung der Daten, da die Objekten in den Bildern zu Trainingszwecken alle einzelnd makiert werden müssen.
+Die Unterschiede zwischen den Methoden werden in dem Bild (Classification_vs_Detection.jpeg) nochmal erläutert.
 
 ## Image Classification (TensorFlow)
-... 
+
+### Vorbereitung und Installation
+Die Basis für die Image Classification liefert das Beispielprojekt TensorFlow For Poets (https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/). Die Installation kann unter OS X auch nativ erfolgen, aber es empfiehlt sich eine Installation von Docker, die einen Linux Kernel in einem Container bereitstellt. So können mehrere Projekte mit unterschiedlichen Versionsanforderungen einfacher realisiert werden. Zudem ist der Austausch zwischen verschiedenen Computern und Betriebssystemen einfacher.
+
+### Anpassung
+Da in diesem Fall wir eine Unterscheidung zwischen verschiedenen Höhlenmalereien treffen wollen, werden die existieren Klassen ausgetauscht gegen die gewünschten eigenen Klassen. Des Weiteren wird statt dem MobileNet Neural Network, das weitaus effizientere Inception_v3 Model verwendet. Dieses braucht zwar für das Training mehr Zeit, allerdings kann dieses auch bei einer geringeren Anzahl an Trainingsdaten genauere Ergebnisse liefern.
+
+### Benutzung
+Zuerst wird mit folgenden Bash Befehl das Tensorboard gestartet, welches über den Browser abgerufen werden kann.
+
+    tensorboard --logdir tf_files/training_summaries &
+    
+Danach kann über folgendene Befehle das Training gestartet werden. Dabei können die Parameter bei Bedarf noch angepasst werden. Weitere Parameter können der scripts.py entnommen werden.
+
+    ARCHITECTURE="inception_v3"
+
+    python -m scripts.retrain \
+    --bottleneck_dir=tf_files/bottlenecks \
+    --model_dir=tf_files/models/ \
+    --summaries_dir=tf_files/training_summaries/"${ARCHITECTURE}" \
+    --output_graph=tf_files/retrained_graph.pb \
+    --output_labels=tf_files/retrained_labels.txt \
+    --architecture="${ARCHITECTURE}" \
+    --image_dir=tf_files/cave_paintings
+
+Zuletzt kann das Model benutzt und getestet werden. Hier ist der Pfad zum Bild zu ersetzen.
+
+    python -m scripts.label_image \
+    --graph=tf_files/retrained_graph.pb  \
+    --image=path/to/image.jpg
+
 
 
 ## Object Detection (Anja)
