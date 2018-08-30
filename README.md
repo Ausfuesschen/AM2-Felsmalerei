@@ -166,8 +166,5 @@ python object_detection\export_inference_graph.py –input_type=image_tensor --p
 #### Modified files
 * *models\model\ssd_inception_v2_coco.config*: contains data for training 
 
-#### Generated files
-...
-
 #### Files of Tran Dat
 * xml_to_csv.py: converts files in xml format to files in csv format
