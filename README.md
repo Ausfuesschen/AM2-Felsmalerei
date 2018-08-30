@@ -154,7 +154,7 @@ Save the trained model as frozen TF Graph in order to test it in a Jupyter Noteb
 python object_detection\export_inference_graph.py –input_type=image_tensor --pipeline_config_path=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\model\\ssd_inception_v2_coco.config --trained_checkpoint_prefix=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\\model\\train\model.ckpt-200 --output_directory=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\output
 ```
 
-### Our current state (26.07.18)
+### Our current state (30.08.18)
 * Frozen graph: Object_Detection\am2_cavepaintings\output\frozen_interference_graph.pb
 * Screenshot folder: Object_Detection\screenshots
 * Output folder: Object_Detection\am2_cavepaintings\output\
@@ -165,6 +165,7 @@ python object_detection\export_inference_graph.py –input_type=image_tensor --p
 
 #### Modified files
 * *models\model\ssd_inception_v2_coco.config*: contains data for training 
+* *TensorFlow\models\research\object_detection\eval.py*: code added for logging details during evaluation process 
 
 #### Files of Tran Dat
 * xml_to_csv.py: converts files in xml format to files in csv format
