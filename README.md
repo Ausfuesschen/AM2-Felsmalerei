@@ -5,7 +5,7 @@ Arbeitsgruppe von: Alexander Schroeder, Kristian Svane, Anja Wodzinski
 Das vorliegeden Projekt setzt sich mit zwei verschiedenen Arten der Bilderkennung durch Machine Learning auseinander. Die erste Methode ist die Image Classification, welche Bilder mit einzelnen Objekten vorher definierten Klassen zuweisen kann. Die zweite Methode erweitert die erste Methode um die Object Detection. Damit lassen sich auf einem Bild mit mehreren Objekten die einzelnen Objekte bestimmen. Die ist besonders nützlich, da die Seiten mit den Figuren in der Theorie ohne Vorarbeit eingelesen werden können, dann die Objekte erkannt werden und zuletzt dann einer Klasse zugewiesen werden können. Allerdings erfordert die Object Detection einen signifikanteren Aufwand bei der Vorbereitung der Daten, da die Objekten in den Bildern zu Trainingszwecken alle einzelnd makiert werden müssen.
 Die Unterschiede zwischen den Methoden werden in dem Bild (Classification_vs_Detection.jpeg) nochmal erläutert.
 
-## Image Classification (TensorFlow)
+## Image Classification (TensorFlow / Mac OS)
 
 ### Vorbereitung und Installation
 Die Basis für die Image Classification liefert das Beispielprojekt TensorFlow For Poets (https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/). Die Installation kann unter OS X auch nativ erfolgen, aber es empfiehlt sich eine Installation von Docker, die einen Linux Kernel in einem Container bereitstellt. So können mehrere Projekte mit unterschiedlichen Versionsanforderungen einfacher realisiert werden. Zudem ist der Austausch zwischen verschiedenen Computern und Betriebssystemen einfacher.
@@ -40,7 +40,7 @@ Zuletzt kann das Model benutzt und getestet werden. Hier ist der Pfad zum Bild z
 
 
 
-## Object Detection (TensorFlow)
+## Object Detection (TensorFlow / Windows 7)
 Training of a neural network (inception_v2 architecture from the TensorFlow model zoo) using TensorFlow Object Detection API.  
 
 ### Tensorflow Installation
