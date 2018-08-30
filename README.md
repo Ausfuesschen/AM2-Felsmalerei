@@ -24,6 +24,7 @@ Danach kann über folgendene Befehle das Training gestartet werden. Dabei könne
 
     python -m scripts.retrain \
     --bottleneck_dir=tf_files/bottlenecks \
+    --how_many_training_steps=2000 \
     --model_dir=tf_files/models/ \
     --summaries_dir=tf_files/training_summaries/"${ARCHITECTURE}" \
     --output_graph=tf_files/retrained_graph.pb \
