@@ -41,7 +41,7 @@ Zuletzt kann das Model benutzt und getestet werden. Hier ist der Pfad zum Bild z
 
 
 ## Object Detection (TensorFlow)
-Training of a neural network (inception_v2 architecture) using TensorFlow Object Detection API.  
+Training of a neural network (inception_v2 architecture from the TensorFlow model zoo) using TensorFlow Object Detection API.  
 
 ### Tensorflow Installation
 * Python 3 (up to 3.6.5) required
