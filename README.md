@@ -149,15 +149,16 @@ tensorboard --logdir=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintin
 ```
 
 ### Freeze Graph
-... 
+Save the trained model as frozen TF Graph in order to test it in a Jupyter Notebook on new images.
+```
+python object_detection\export_inference_graph.py –input_type=image_tensor --pipeline_config_path=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\model\\ssd_inception_v2_coco.config --trained_checkpoint_prefix=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\\model\\train\model.ckpt-200 --output_directory=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\output
+```
 
 ### Our current state (26.07.18)
 * Frozen graph: Object_Detection\am2_cavepaintings\output\frozen_interference_graph.pb
 * Screenshot folder: Object_Detection\screenshots
 * Output folder: Object_Detection\am2_cavepaintings\output\
-* Fix evaluation error (see screenshot in output folder: \Object_Detection\screenshots\errors\evaluation_process_error.jpg)
 
-### Files 
 #### Own files
 * Readme.md 
 * label_map_pbtxt
@@ -166,7 +167,7 @@ tensorboard --logdir=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintin
 * *models\model\ssd_inception_v2_coco.config*: contains data for training 
 
 #### Generated files
-... 
+...
 
-#### Files of Dat Tran
+#### Files of Tran Dat
 * xml_to_csv.py: converts files in xml format to files in csv format
