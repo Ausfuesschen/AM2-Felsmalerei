@@ -154,18 +154,23 @@ Save the trained model as frozen TF Graph in order to test it in a Jupyter Noteb
 python object_detection\export_inference_graph.py –input_type=image_tensor --pipeline_config_path=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\model\\ssd_inception_v2_coco.config --trained_checkpoint_prefix=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\models\\model\\train\model.ckpt-200 --output_directory=C:\\Users\\Computer\\Documents\\TensorFlow\\am2_cavepaintings\\output
 ```
 
+### Testing model on new images
+In order to test the model on new images, install the jupyter notebook library and replace the .ipynb file with the one on this git. Paths to files, used pretrained model, number of classes and names of images need to be adjusted afterwards. 
+* Helpful tutorial: https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb
+
 ### Our current state (30.08.18)
 * Frozen graph: Object_Detection\am2_cavepaintings\output\frozen_interference_graph.pb
 * Screenshot folder: Object_Detection\screenshots
 * Output folder: Object_Detection\am2_cavepaintings\output\
 
 #### Own files
-* Readme.md 
+* Readme.md (part Object Detection)
 * label_map_pbtxt
 
 #### Modified files
 * *models\model\ssd_inception_v2_coco.config*: contains data for training 
-* *TensorFlow\models\research\object_detection\eval.py*: code added for logging details during evaluation process 
+* *TensorFlow\models\research\object_detection\eval.py*: code added for logging details during evaluation process
+* *am2_cavepaintings\object_detection_tutorial_cavepaintings.ipynb*: Jupyter Notebook file with Object Detection tutorial, modified to be used with our dataset. 
 
 #### Files of Tran Dat
 * xml_to_csv.py: converts files in xml format to files in csv format
